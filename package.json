@@ -1,0 +1,19 @@
+{
+  "name": "tiny-shared-workspace",
+  "version": "1.0.0",
+  "description": "A tiny shared workspace for humans and agents (mocked, no API key)",
+  "main": "space.ts",
+  "scripts": {
+    "start": "tsx space.ts",
+    "typecheck": "tsc --noEmit --strict --target es2022 --module nodenext --moduleResolution nodenext --types node space.ts",
+    "test": "npm run typecheck && tsx space.ts > .actual-output.txt && diff -u expected-output.txt .actual-output.txt && echo 'output matches expected-output.txt'"
+  },
+  "keywords": [],
+  "author": "Bobby Hall Jr <bobby@bhjr.dev>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

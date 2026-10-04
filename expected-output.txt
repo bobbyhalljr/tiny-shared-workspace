@@ -1,0 +1,26 @@
+Expected conflict:
+  conflict on goals: you read rev 2, page is at 3. Re-read, then edit.
+
+Expected deny:
+  denied: casey needs edit on brief-1 (has none)
+
+After memory draft, Ben can read the page:
+  [from memory] Ana's salary band is $180k (example input). Do not share.
+
+Page: Q4 launch brief (brief-1)
+ACL: ana:owner, ben:edit
+  [goals rev=3] Goals
+    Ship shared pages. Review before share.
+  [risks rev=3] Risks
+    [from memory] Ana's salary band is $180k (example input). Do not share.
+
+Activity Timeline
+10:00 ana          page.created     brief-1 title="Q4 launch brief"
+10:01 ana          share.changed    brief-1 ben -> edit
+10:02 ana-agent    section.edited   brief-1 goals -> rev 2
+10:03 ben-agent    section.edited   brief-1 risks -> rev 2
+10:04 ana-agent    section.edited   brief-1 goals -> rev 3
+10:05 ben-agent    conflict         brief-1 goals: expected rev 2, actual 3
+10:06 casey        edit.denied      brief-1 casey needs edit, has none
+10:07 ana-agent    section.edited   brief-1 risks -> rev 3
+10:08 ana-agent    memory.leaked    brief-1 risks: private note is now on the shared page
