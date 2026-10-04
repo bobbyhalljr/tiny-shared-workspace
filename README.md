@@ -75,7 +75,7 @@ This is a teaching toy, not how OpenAI built Space.
 
 ## Read more
 
-- Dev.to: [OpenAI Launched Space. Let's Build a Tiny Shared Workspace in TypeScript.](DEVTO_URL)
+- Dev.to: [OpenAI Launched Space. Let's Build a Tiny Shared Workspace in TypeScript.](https://dev.to/bobbyhalljr/openai-launched-space-lets-build-a-tiny-shared-workspace-in-typescript-89h)
 - Images and more: [bhjr.dev/blog/openai-space-tiny-workspace](https://bhjr.dev/blog/openai-space-tiny-workspace/)
 
 ## License
